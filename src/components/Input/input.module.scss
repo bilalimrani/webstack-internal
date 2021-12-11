@@ -1,0 +1,49 @@
+
+
+.inputContainer {
+    font-family: 'Averta-Regular', sans-serif;
+    box-shadow: 0px 0px 23px 0px #0000002e;
+
+    input:focus,
+    input:not(:focus):valid{
+        background-color: #E3F2FF;
+    }
+
+    input:focus ~ .floatingLabel,
+    input:not(:focus):valid ~ .floatingLabel{
+        top: 18px;
+        bottom: 10px;
+        left: 20px;
+        font-size: 11px;
+        opacity: 1;
+    }
+
+
+    .inputText {
+        font-size: 14px;
+        width: 100%;
+        height: 40px;
+        border: none;
+
+        &:hover {
+            background-color: #E3F2FF;
+        }
+
+        &:focus {
+            border: 2px solid #2885F6;
+            ~ .floatingLabel {
+                color: #2885F6;
+            }
+        }
+    }
+
+    .floatingLabel {
+        position: absolute;
+        pointer-events: none;
+        left: 20px;
+        top: 25px;
+        transition: 0.2s ease all;
+        color: #667085;
+    }
+
+}
