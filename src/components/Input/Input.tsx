@@ -1,4 +1,4 @@
-import { forwardRef, useState } from 'react';
+import React, { forwardRef, useState } from 'react';
 import styles from './input.module.scss';
 
 const Input = forwardRef(({
