@@ -15,17 +15,17 @@ function App() {
   );
 
   return (
-    <MuiThemeProvider theme={theme}>
-      <Router>
-        <Switch>
-          <Layout>
-            {routes.map((route: AppRoute) =>
-              route.subRoutes ? route.subRoutes.map((item: AppRoute) => addRoute(item)) : addRoute(route)
-            )}
-          </Layout>
-        </Switch>
-      </Router>
-    </MuiThemeProvider>
+    // <MuiThemeProvider theme={theme}>
+    <Router>
+      <Switch>
+        <Layout>
+          {routes.map((route: AppRoute) =>
+            route.subRoutes ? route.subRoutes.map((item: AppRoute) => addRoute(item)) : addRoute(route)
+          )}
+        </Layout>
+      </Switch>
+    </Router>
+    // </MuiThemeProvider>
   );
 }
 

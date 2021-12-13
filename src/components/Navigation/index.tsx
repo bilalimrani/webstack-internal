@@ -1,11 +1,8 @@
 import { Drawer as MuiDrawer, styled } from '@mui/material';
 
 import { Routes } from './Routes';
-
 import { DRAWER_WIDTH } from '../../utils/constants';
 import { navClosedMixin, navOpenedMixin } from '../../styles/mixins';
-import Input from '../Input';
-
 interface NavigationProps {
   open: boolean | undefined;
   handleClose: () => void;
@@ -15,7 +12,7 @@ export const Navigation = ({ open, handleClose }: NavigationProps) => {
   return (
     <Drawer variant="permanent" open={open} onClose={handleClose}>
       <DrawerHeader />
-      <Input label='sdfsdfsadfassss' />
+      <h1>vasd</h1>
       <Routes />
     </Drawer>
   );
