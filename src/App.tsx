@@ -8,7 +8,7 @@ import { routes } from './config';
 import { Route as AppRoute } from './types';
 // import theme from './styles/theme';
 import { DARK_MODE_THEME, LIGHT_MODE_THEME } from './utils/constants';
-import theme from './styles/theme';
+import { getAppTheme } from './styles/theme';
 
 
 const App = () => {
@@ -26,7 +26,7 @@ const App = () => {
     []
   );
 
-  // const theme = useMemo(() => createTheme(getAppTheme(mode)), [mode]);
+  const theme = useMemo(() => createTheme(getAppTheme(mode)), [mode]);
 
   return (
     <ThemeModeContext.Provider value={themeMode}>

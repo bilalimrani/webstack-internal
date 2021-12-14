@@ -1,7 +1,10 @@
 import { addDecorator } from '@storybook/react';
-import { ThemeProvider } from '@mui/material/styles';
-import theme from '../src/styles/theme';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { getAppTheme } from '../src/styles/theme';
 
-addDecorator((story) => (
-  <ThemeProvider theme={theme}>{story()}</ThemeProvider>
-));
+addDecorator((story) => {
+  const theme = createTheme(getAppTheme('light'))
+  return (
+    <ThemeProvider theme={theme}>{story()}</ThemeProvider>
+  )
+});
