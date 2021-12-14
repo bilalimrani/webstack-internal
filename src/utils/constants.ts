@@ -23,3 +23,8 @@ export const BUTTON_TYPES = {
     SECONDARY: 'secondary',
     TERTIARY: 'tertiary'
 }
+
+export const DARK_MODE_COLOR = '#101828';
+export const LIGHT_MODE_COLOR = '#FFFFFF';
+export const LIGHT_MODE_COLOR_CONTRAST_TEXT = '#344054'
+export const PRIMARY_COLOR_DIVIDER = '#1D2939'

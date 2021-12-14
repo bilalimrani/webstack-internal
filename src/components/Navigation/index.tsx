@@ -1,8 +1,9 @@
-import { Drawer as MuiDrawer, styled } from '@mui/material';
+import { Drawer as MuiDrawer, styled, Typography } from '@mui/material';
 
 import { Routes } from './Routes';
 import { DRAWER_WIDTH } from '../../utils/constants';
 import { navClosedMixin, navOpenedMixin } from '../../styles/mixins';
+import RadioGroupComp from '../Radio/RadioGroup';
 interface NavigationProps {
   open: boolean | undefined;
   handleClose: () => void;
@@ -12,8 +13,9 @@ export const Navigation = ({ open, handleClose }: NavigationProps) => {
   return (
     <Drawer variant="permanent" open={open} onClose={handleClose}>
       <DrawerHeader />
-      <h1>vasd</h1>
+      <RadioGroupComp list={['one', 'two']} />
       <Routes />
+      <Typography variant='h6'>Heading 6</Typography>
     </Drawer>
   );
 };

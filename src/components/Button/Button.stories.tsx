@@ -18,10 +18,11 @@ export default {
 
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
-export const PrimaryIcon = Template.bind({});
-PrimaryIcon.args = {
+export const Buttons = Template.bind({});
+Buttons.args = {
   label: 'Talk to Sales',
   icon: true,
   size: 'large',
   disabled: false,
+  btnType: 'large'
 };

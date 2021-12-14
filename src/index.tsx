@@ -1,11 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Helmet } from 'react-helmet';
-
 import App from './App';
-
 import reportWebVitals from './reportWebVitals';
 import { APP_TITLE, APP_DESCRIPTION } from './utils/constants';
+import './assets/sass/main.scss';
 
 ReactDOM.render(
   <React.StrictMode>

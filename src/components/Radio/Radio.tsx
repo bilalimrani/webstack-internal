@@ -1,11 +1,11 @@
 import Radio from '@mui/material/Radio';
 
-const RadioComp = () => {
-    return (
-        <Radio />
-    )
+const RadioComp = ({ value, defaultChecked, onChange }: any) => {
+    return <Radio value={value} defaultChecked={defaultChecked} onChange={onChange} />
 }
 
-RadioComp.defaultProps = {}
+RadioComp.defaultProps = {
+    onChange: () => null
+}
 
 export default RadioComp

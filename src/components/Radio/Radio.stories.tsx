@@ -1,12 +1,12 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import Radio from './Radio';
+import RadioComp from './Radio';
 
 export default {
-    title: 'Webstacks/RadioComp',
-    component: Radio,
-} as ComponentMeta<typeof Radio>;
+    title: 'Webstacks/Radio',
+    component: RadioComp,
+} as ComponentMeta<typeof RadioComp>;
 
-const Template: ComponentStory<typeof Radio> = () => <Radio />;
+const Template: ComponentStory<typeof RadioComp> = () => <RadioComp />;
 
-export const RadioSingle = Template.bind({});
-RadioSingle.args = {};
+export const Radio = Template.bind({});
+Radio.args = {};

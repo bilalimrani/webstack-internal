@@ -1,12 +1,12 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import Checkbox from './Checkbox';
+import CheckboxComp from './Checkbox';
 
 export default {
     title: 'Webstacks/Checkbox',
-    component: Checkbox,
-} as ComponentMeta<typeof Checkbox>;
+    component: CheckboxComp,
+} as ComponentMeta<typeof CheckboxComp>;
 
-const Template: ComponentStory<typeof Checkbox> = () => <Checkbox />;
+const Template: ComponentStory<typeof CheckboxComp> = () => <CheckboxComp />;
 
-export const CheckboxSingle = Template.bind({});
-CheckboxSingle.args = {};
+export const Checkbox = Template.bind({});
+Checkbox.args = {};

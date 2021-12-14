@@ -1,52 +1,21 @@
+import { Typography } from '@mui/material';
 import styles from './Typography.module.scss';
 
-const typographyConst = [
-    {
-        title: 'Heading 1',
-        rank: 'h1'
-    },
-    {
-        title: 'Heading 2',
-        rank: 'h2'
-    },
-    {
-        title: 'Heading 3',
-        rank: 'h3'
-    },
-    {
-        title: 'Heading 4',
-        rank: 'h4'
-    },
-    {
-        title: 'Heading 5',
-        rank: 'h5'
-    },
-    {
-        title: 'Heading 6',
-        rank: 'h6'
-    },
-]
-
-const Typography = () => {
+const TypographyComp = () => {
     return (
         <>
-            <h1>Typography</h1>
+            <Typography variant='h4'>Typography</Typography>
             <span><strong>Font:</strong> Averta</span>
             <div className={styles.container}>
-                {
-                    typographyConst.map((item: any, index) => {
-                        const Tag = item.rank;
-                        return (
-                            <div>
-                                {/* <span>{index + 1}: </span> */}
-                                <Tag>{item.title}</Tag>
-                            </div>
-                        )
-                    })
-                }
+                <Typography variant='h6'>Heading 6</Typography>
+                <Typography variant='h5'>Heading 5</Typography>
+                <Typography variant='h4'>Heading 4</Typography>
+                <Typography variant='h3'>Heading 3</Typography>
+                <Typography variant='h2'>Heading 2</Typography>
+                <Typography variant='h1'>Heading 1</Typography>
             </div>
         </>
     );
 }
 
-export default Typography
+export default TypographyComp

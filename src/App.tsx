@@ -1,31 +1,48 @@
-import { MuiThemeProvider, StylesProvider } from '@material-ui/core/styles';
+import { useMemo, useState } from 'react';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { CssBaseline } from '@mui/material';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { ThemeModeContext } from './contexts';
 import { Layout } from './components/Layout';
-// import { AppContext } from './contexts';
-import { AppClient } from './clients';
 import { routes } from './config';
 import { Route as AppRoute } from './types';
+// import theme from './styles/theme';
+import { DARK_MODE_THEME, LIGHT_MODE_THEME } from './utils/constants';
 import theme from './styles/theme';
 
-function App() {
-  const appClient = new AppClient();
 
+const App = () => {
+  const [mode, setMode] = useState<typeof LIGHT_MODE_THEME | typeof DARK_MODE_THEME>(DARK_MODE_THEME);
   const addRoute = (route: AppRoute) => (
     <Route key={route.key} />
   );
 
+  const themeMode = useMemo(
+    () => ({
+      toggleThemeMode: () => {
+        setMode((prevMode) => (prevMode === LIGHT_MODE_THEME ? DARK_MODE_THEME : LIGHT_MODE_THEME));
+      },
+    }),
+    []
+  );
+
+  // const theme = useMemo(() => createTheme(getAppTheme(mode)), [mode]);
+
   return (
-    // <MuiThemeProvider theme={theme}>
-    <Router>
-      <Switch>
-        <Layout>
-          {routes.map((route: AppRoute) =>
-            route.subRoutes ? route.subRoutes.map((item: AppRoute) => addRoute(item)) : addRoute(route)
-          )}
-        </Layout>
-      </Switch>
-    </Router>
-    // </MuiThemeProvider>
+    <ThemeModeContext.Provider value={themeMode}>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <Router>
+          <Switch>
+            <Layout>
+              {routes.map((route: AppRoute) =>
+                route.subRoutes ? route.subRoutes.map((item: AppRoute) => addRoute(item)) : addRoute(route)
+              )}
+            </Layout>
+          </Switch>
+        </Router>
+      </ThemeProvider>
+    </ThemeModeContext.Provider>
   );
 }
 

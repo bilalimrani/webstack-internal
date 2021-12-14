@@ -1,12 +1,23 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import Slider from './Slider';
+import SliderComp from './Slider';
 
 export default {
     title: 'Webstacks/Slider',
-    component: Slider,
-} as ComponentMeta<typeof Slider>;
+    component: SliderComp,
+    argTypes: {
+        size: {
+            options: ['small', 'large'],
+            control: { type: 'select' },
+        }
+    }
+} as ComponentMeta<typeof SliderComp>;
 
-const Template: ComponentStory<typeof Slider> = () => <Slider />;
+const Template: ComponentStory<typeof SliderComp> = (args) => <SliderComp {...args} />;
 
-export const SliderSingle = Template.bind({});
-SliderSingle.args = {};
+export const Slider = Template.bind({});
+Slider.args = {
+    min: 10,
+    max: 20,
+    disabled: false,
+    size: 'small'
+};

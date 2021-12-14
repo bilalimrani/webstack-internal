@@ -1,15 +1,15 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import Input from './';
+import InputComp from './';
 
 export default {
     title: 'Webstacks/Input',
-    component: Input,
-} as ComponentMeta<typeof Input>;
+    component: InputComp,
+} as ComponentMeta<typeof InputComp>;
 
-const Template: ComponentStory<typeof Input> = (args) => <Input {...args} />;
+const Template: ComponentStory<typeof InputComp> = (args) => <InputComp {...args} />;
 
-export const Primary = Template.bind({});
-Primary.args = {
+export const Input = Template.bind({});
+Input.args = {
     type: 'text',
     label: 'Email Address'
 };

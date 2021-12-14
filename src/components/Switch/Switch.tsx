@@ -1,9 +1,12 @@
 import Switch from '@mui/material/Switch';
 
-const SwitchComp = ({ label }: any) => {
+const SwitchComp = ({ label, ...props }: any) => {
     label = { inputProps: { 'aria-label': label } };
     return (
-        <Switch {...label} />
+        <Switch
+            {...props}
+            {...label}
+        />
     )
 }
 

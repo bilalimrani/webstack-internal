@@ -1,11 +1,13 @@
 import Checkbox from '@mui/material/Checkbox';
 
-const CheckboxComp = () => {
+const CheckboxComp = ({ isDisabled, value }: any) => {
     return (
-        <Checkbox />
+        <Checkbox disabled={isDisabled} value={value} />
     )
 }
 
-CheckboxComp.defaultProps = {}
+CheckboxComp.defaultProps = {
+    isDisabled: false,
+}
 
 export default CheckboxComp
