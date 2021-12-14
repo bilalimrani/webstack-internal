@@ -24,7 +24,10 @@
     src: url('http://fonts.cdnfonts.com/css/averta-blackitalic');
     font-size: var(--text-base-size);
 }
-
+.averta-regular {
+    font-family: "'Averta-Regular', sans-serif";
+    font-weight: normal;
+}
 body {
     font-size: var(--text-base-size);
     // font-family: "'Averta-Regular', sans-serif";

@@ -1,0 +1,87 @@
+.footer {
+  padding-block: 96px;
+  background-color: #1D2939;
+  .customContainer {
+    max-width: 1140px;
+    width: 100%;
+    padding-inline: 15px;
+    margin: 0 auto;
+    .topContent {
+      display: flex;
+      justify-content: space-between;
+      .logoSection {
+        p {
+          font-size: 14.44px;
+          color: #ffffff;
+          font-weight: normal;
+          Line-height: 17.85px;
+          letter-spacing: 1px;
+          font-family: 'Averta', sans-serif;
+        }
+      }
+      .socialIconsInner {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        column-gap: 10px;
+        a {
+          text-decoration: none;
+          margin: 0 12px;
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+    .mainListingWrapper {
+      display: flex;
+      justify-content: space-between;
+      padding-block: 40px;
+      column-gap: 15px;
+      .listingWrapper {
+        h6 {
+          padding-bottom: 1rem;
+          color: #ffffff;
+          font-weight: 600;
+          line-height: 150%;
+          letter-spacing: 1px;
+        }
+        ul {
+          padding: 0;
+          margin: 0;
+          list-style: none;
+          li {
+            padding-bottom: 1rem;
+            a {
+              text-decoration: none;
+              color: #ffffff;
+              font-family: 'Averta', sans-serif;
+              font-size: 14.44px;
+              font-weight: normal;
+              line-height: 16px;
+              letter-spacing: 1px;
+            }
+          }
+        }
+      }
+    }
+    .borderColor {
+      border-color: #D0D5DD;
+    }
+    .bottomContent {
+      padding-top: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      column-gap: 15px;
+      a, p {
+        color: #ffffff;
+        text-decoration: none;
+        font-family: 'Averta', sans-serif;
+        font-size: 14.44px;
+        font-weight: normal;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
