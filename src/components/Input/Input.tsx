@@ -5,14 +5,16 @@ const Input = forwardRef(({
     onChange,
     label,
     type,
+    styleInputWrapper,
+    styleLabel,
     ...rest
 }: any, ref) => {
     const [value, setValue] = useState('');
     const [error] = useState('');
     return (
-        <div className={styles.inputContainer}>
-            <input type={type} className={error ? `${styles.error}` : ''} value={value} onChange={(e) => setValue(e.target.value)} />
-            <label className={`${value && `${styles.filled}`}${error ? `${styles.error}` : ''}`} htmlFor={label}>
+        <div className={`inputContainer ${styles.inputContainer} ${styleInputWrapper}`}>
+            <input type={type} className={`${ error ? `${styles.error}` : ''}`} value={value} onChange={(e) => setValue(e.target.value)} />
+            <label className={`${value && `filled`} ${error ? styles.error : ''} ${styleLabel}`} htmlFor={label}>
                 {label}
             </label>
             {/* {error && <span className={styles.error}>Email must be formatted correctly.</span>} */}

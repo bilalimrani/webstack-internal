@@ -2,12 +2,12 @@ import React from 'react';
 import styles from './Footer.module.scss';
 import { Link, BrowserRouter as Router } from 'react-router-dom';
 import logoImage from '../../assets/svg/logo.svg';
-import settingsImage from '../../assets/svg/setting-dark.svg';
-import moonImage from '../../assets/svg/moon-white.svg';
-import twitterImage from '../../assets/svg/twitter.svg';
-import instagramImage from '../../assets/svg/instagram.svg';
-import websiteImage from '../../assets/svg/website.svg';
-import linkedinImage from '../../assets/svg/linkedin.svg';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import LanguageIcon from '@mui/icons-material/Language';
+import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
+import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
 import footerLogoImage from '../../assets/svg/footer-logo.svg';
 import {Switch} from "../Switch/Switch.stories";
 import {Box, Typography} from "@mui/material";
@@ -33,20 +33,20 @@ const Footer = () => {
                     <Box className={styles.socialIconsWrapper}>
                         <Box className={styles.socialIconsInner}>
                             <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                                <img src={settingsImage} alt="settings" />
+                                <LightModeOutlinedIcon />
                                 <Switch />
-                                <img src={moonImage} alt="settings" />
+                                <DarkModeOutlinedIcon />
                             </Box>
                             <Box>
-                                <Router><Link to="twitter.com"><img src={twitterImage} alt="twitter"/> </Link></Router>
-                                <Router><Link to="instagram.com"><img src={instagramImage} alt="instagram"/> </Link></Router>
-                                <Router><Link to="linkedin.com"><img src={linkedinImage} alt="Linkedin"/> </Link></Router>
-                                <Router><Link to="twitter.com"><img src={websiteImage} alt="website"/> </Link></Router>
+                                <Router><Link to="twitter.com"><TwitterIcon /></Link></Router>
+                                <Router><Link to="instagram.com"><InstagramIcon /></Link></Router>
+                                <Router><Link to="linkedin.com"><LinkedInIcon /></Link></Router>
+                                <Router><Link to="twitter.com"><LanguageIcon /></Link></Router>
                             </Box>
                         </Box>
-                        <Box sx={{display: 'flex', columnGap: '8px', marginTop: '24px'}}>
-                            <Input label="Subscribe to our newsletter" />
-                            <Buttons label="Subscribe" size="medium" />
+                        <Box className={styles.subscriptionWrapper}>
+                            <input type="text" placeholder="Subscribe to our newsletter" />
+                            <Buttons type="primary" label="Subscribe" size="small" cssClass={styles.btnStyling} />
                         </Box>
                     </Box>
                 </Box>
