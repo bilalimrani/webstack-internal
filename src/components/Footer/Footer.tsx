@@ -1,7 +1,9 @@
 import React from 'react';
 import styles from './Footer.module.scss';
 import { Link, BrowserRouter as Router } from 'react-router-dom';
-import logoImage from '../../assets/svg/logo.svg';
+import {Switch} from "../Switch/Switch.stories";
+import {Box, Typography} from "@mui/material";
+import {Buttons} from "../Button/Button.stories";
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -9,11 +11,8 @@ import LanguageIcon from '@mui/icons-material/Language';
 import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
 import footerLogoImage from '../../assets/svg/footer-logo.svg';
-import {Switch} from "../Switch/Switch.stories";
-import {Box, Typography} from "@mui/material";
+import logoImage from '../../assets/svg/logo.svg';
 import Divider from '@mui/material/Divider';
-import {Input} from "../Input/Input.stories";
-import {Buttons} from "../Button/Button.stories";
 import {solutionsArray, useCases, resources, company} from './constants';
 
 const Footer = () => {

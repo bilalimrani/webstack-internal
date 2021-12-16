@@ -10,11 +10,11 @@
       justify-content: space-between;
       .logoSection {
         p {
-          font-size: 14.44px;
+          font-size: 13.44px;
           color: #ffffff;
-          font-weight: normal;
+          font-weight: 400;
           Line-height: 17.85px;
-          letter-spacing: 1px;
+          letter-spacing: 0.8px;
           font-family: 'Averta', sans-serif;
         }
       }
@@ -60,6 +60,9 @@
               color: #D0D5DD;
             }
           }
+        .btnStyling {
+          border-color: transparent !important;
+        }
       }
     }
     .mainListingWrapper {
@@ -73,7 +76,7 @@
           color: #ffffff;
           font-weight: 600;
           line-height: 150%;
-          letter-spacing: 1px;
+          letter-spacing: 0.8px;
         }
         ul {
           padding: 0;
@@ -88,17 +91,17 @@
               text-decoration: none;
               color: #ffffff;
               font-family: 'Averta', sans-serif;
-              font-size: 14.44px;
-              font-weight: normal;
+              font-size: 13.44px;
+              font-weight: 400;
               line-height: 16px;
-              letter-spacing: 1px;
+              letter-spacing: 0.7px;
             }
           }
         }
       }
     }
     .borderColor {
-      border-color: #D0D5DD;
+      border-color: #475467;
     }
     .bottomContent {
       padding-top: 40px;
@@ -110,10 +113,11 @@
         color: #ffffff;
         text-decoration: none;
         font-family: 'Averta', sans-serif;
-        font-size: 14.44px;
-        font-weight: normal;
+        font-size: 13.44px;
+        font-weight: 400;
         margin-bottom: 0;
         margin-top: 0;
+        letter-spacing: 0.8px;
       }
     }
   }
