@@ -7,6 +7,7 @@ import { Layout } from './components/Layout';
 import { routes } from './config';
 import { Route as AppRoute } from './types';
 // import theme from './styles/theme';
+import './App.scss';
 import { DARK_MODE_THEME, LIGHT_MODE_THEME } from './utils/constants';
 import { getAppTheme } from './styles/theme';
 
