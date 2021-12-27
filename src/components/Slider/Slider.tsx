@@ -23,9 +23,10 @@ const SliderSingle = ({ defaultValue, size, valueLabelDisplay, onChange, min, ma
 }
 
 SliderSingle.defaultProps = {
-    size: 'small',
+    size: 'large',
     valueLabelDisplay: 'auto',
-    onChange: () => null
+    onChange: () => null,
+    color: 'primary'
 }
 
 export default SliderSingle

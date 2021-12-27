@@ -1,5 +1,0 @@
-@mixin bradius($topl: 4px, $topr: 4px, $bottomr: 4px, $bottoml: 4px) {
-  border-radius: $topl $topr $bottomr $bottoml;
-  -moz-border-radius: $topl $topr $bottomr $bottoml;
-  -webkit-border-radius: $topl $topr $bottomr $bottoml;
-}

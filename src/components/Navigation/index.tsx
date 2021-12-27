@@ -1,4 +1,4 @@
-import { Drawer as MuiDrawer, styled, Typography } from '@mui/material';
+import { Drawer as MuiDrawer, styled } from '@mui/material';
 
 import { Routes } from './Routes';
 import { DRAWER_WIDTH } from '../../utils/constants';
@@ -15,7 +15,6 @@ export const Navigation = ({ open, handleClose }: NavigationProps) => {
       <DrawerHeader />
       <RadioGroupComp list={['one', 'two']} />
       <Routes />
-      <Typography variant='h6'>Heading 6</Typography>
     </Drawer>
   );
 };

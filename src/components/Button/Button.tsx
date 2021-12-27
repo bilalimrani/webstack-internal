@@ -1,33 +1,46 @@
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
-import clsx from 'classnames';
-import styles from './Button.module.scss';
+import { Button, ThemeProvider } from '@mui/material';
+import buttonTheme from '../../styles/buttons.theme';
+
+interface Props {
+  color?: 'primary' | 'secondary' | 'tertiary';
+  label: string;
+  icon?: boolean;
+  variant?: string;
+  className?: string;
+  size?: 'large' | 'medium' | 'small';
+  disabled?: boolean;
+}
 
 const ButtonComp = ({
-  btnType,
+  color,
   label,
   icon,
+  className,
   disabled,
   size,
-  ...props
-}: any) => {
-  const iconSizeStyle = size === 'large' ? styles.iconSizeLarge : size === 'medium' ? styles.iconSizeMedium : styles.iconSizeSmall;
+}: Props) => {
+  console.log('buttonTheme', buttonTheme, color);
   return (
-    <button
-      className={clsx(styles.button, styles[btnType], styles[size])}
-      disabled={disabled}
-      {...props}
-    >
-      {label}
-      {icon && <ArrowForwardIcon className={iconSizeStyle} />}
-    </button>
+    <ThemeProvider theme={buttonTheme}>
+      <Button
+        color={color}
+        endIcon={icon && <ArrowForwardIcon />}
+        className={className}
+        disabled={disabled}
+        size={size}>
+        {label}
+      </Button>
+    </ThemeProvider>
   );
 };
 
 ButtonComp.defaultProps = {
-  onclick: () => null,
-  btnType: 'primary',
+  onClick: () => null,
   icon: false,
-  size: 'large'
-}
+  size: 'large',
+  variant: 'contained',
+  className: '',
+};
 
 export default ButtonComp;

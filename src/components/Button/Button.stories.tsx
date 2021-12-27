@@ -9,8 +9,8 @@ export default {
       options: ['large', 'medium', 'small'],
       control: { type: 'select' },
     },
-    btnType: {
-      options: ['primary', 'secondary', 'tertiary'],
+    color: {
+      options: ['primary', 'secondary'],
       control: { type: 'select' },
     },
   },
@@ -24,5 +24,5 @@ Buttons.args = {
   icon: true,
   size: 'large',
   disabled: false,
-  btnType: 'large'
+  color: 'primary',
 };

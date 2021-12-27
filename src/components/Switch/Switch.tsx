@@ -1,17 +1,17 @@
 import Switch from '@mui/material/Switch';
 
-const SwitchComp = ({ label, ...props }: any) => {
-    label = { inputProps: { 'aria-label': label } };
+const SwitchComp = ({ onChange, ...rest }: any) => {
     return (
         <Switch
-            {...props}
-            {...label}
+            onChange={onChange}
+            {...rest}
         />
     )
 }
 
 SwitchComp.defaultProps = {
-    label: 'Switch demo'
+    label: '',
+    onChange: () => null,
 }
 
 export default SwitchComp

@@ -13,7 +13,12 @@ const Input = forwardRef(({
     const [error] = useState('');
     return (
         <div className={`inputContainer ${styles.inputContainer} ${styleInputWrapper}`}>
-            <input type={type} className={`${ error ? `${styles.error}` : ''}`} value={value} onChange={(e) => setValue(e.target.value)} />
+            <input
+                type={type}
+                className={`${error ? `${styles.error}` : ''}`} value={value}
+                onChange={(e) => setValue(e.target.value)}
+                {...rest}
+            />
             <label className={`${value && `filled`} ${error ? styles.error : ''} ${styleLabel}`} htmlFor={label}>
                 {label}
             </label>
