@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 import { COLOR } from '../../../styles/colors';
 
 const CardWrapper = styled.div`
-    background-color: ${COLOR.divider};
+    background-color: ${props =>  props.theme.palette.primary.dark};
     width: 100%;
     padding: 40px;
-    border: 1px solid ${COLOR.secondary200};
+    // border: 1px solid ${COLOR.secondary200};
     box-sizing: border-box;
     border-radius: 4px;
 `;
@@ -14,7 +14,7 @@ const CardInner = styled.div`
     max-width: 440px;
 `;
 const CardHeading = styled.h3`
-    color: #ffffff;
+    color:  ${props =>  props.theme.palette.text.primary};
     font-size: 28.13px;
     font-weight: 800;
     line-height: 150%;
@@ -22,7 +22,7 @@ const CardHeading = styled.h3`
     font-family: 'Averta', sans-serif;
 `;
 const CardDetails = styled.p`
-    color: ${COLOR.secondary200};
+    color: ${props =>  props.theme.palette.text.secondary};
     font-size: 18px;
     font-weight: 400;
     line-height: 27px;
@@ -51,7 +51,7 @@ const RatingsWrapper = styled.div`
     }
 `;
 const CardDetailsRecommended = styled(CardDetails)`
-    color: #ffffff;
+    color: ${props =>  props.theme.palette.text.primary};;
     font-weight: 600;
     margin: 0 0 8px;
     font-family: 'Averta', sans-serif;

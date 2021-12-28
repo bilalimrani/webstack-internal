@@ -1,9 +1,9 @@
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import FooterComp from "./Footer";
-import { ThemeModeContext } from "../../contexts";
+import { ComponentStory, ComponentMeta } from '@storybook/react';
+import FooterComp from './Footer';
+import { ThemeModeContext } from '../../contexts';
 
 export default {
-  title: "Webstacks/Footer",
+  title: 'Components/Footer',
   component: FooterComp,
   decorators: [
     (Story, context) => (

@@ -51,6 +51,39 @@ export const COLOR = {
     neutral800: '#2961CF',
     neutral900: '#2740B0',
 
+    violet50: '#feedef',
+    violet100: '#FED3D5',
+    violet200: '#EDA5A0',
+    violet300: '#E3847C',
+    violet400: '#ED6B5A',
+    violet500: '#F06142',
+    violet600: '#E35941',
+    violet700: '#D14F3B',
+    violet800: '#C34A35',
+    violet900: '#B54029',
+
+    warning50: '#fbf2e2',
+    warning100: '#f7dfb6',
+    warning200: '#f2ca87',
+    warning300: '#edb55a',
+    warning400: '#eaa53c',
+    warning500: '#e89724',
+    warning600: '#e48c20',
+    warning700: '#de7d1c',
+    warning800: '#d76f17',
+    warning900: '#ce570f',
+
+    gray50: '#F9FAFB',
+    gray100: '#F2F4F7',
+    gray200: '#E4E7EC',
+    gray300: '#D0D5DD',
+    gray400: '#98A2B3',
+    gray500: '#667085',
+    gray600: '#475467',
+    gray700: '#344054',
+    gray800: '#1D2939',
+    gray900: '#101828',
+
 
     divider: '#1D2939'
 } as const;

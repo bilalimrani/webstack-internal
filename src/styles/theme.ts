@@ -10,27 +10,29 @@ export const getAppTheme = (mode: any) => ({
     ...(mode === LIGHT_MODE_THEME
       ? {
         primary: {
-          main: COLOR.white
+          main: COLOR.white,
+          dark: COLOR.secondary50
         },
         
-          divider: COLOR.secondary100,
+          divider: COLOR.secondary200,
           text: {
-            primary: COLOR.secondary700,
-            secondary: COLOR.secondary900,
+            primary: COLOR.secondary900,
+            secondary: COLOR.secondary700,
           },
         }
       : {
         primary: {
-          main: COLOR.secondary900
+          main: COLOR.gray900,
+          dark: COLOR.gray800
         },
-        divider: COLOR.divider,
+        divider: COLOR.gray700,
         background: {
-          default: COLOR.secondary900,
-          paper: COLOR.secondary900,
+          default: COLOR.gray900,
+          paper: COLOR.gray900,
         },
         text: {
           primary: COLOR.white,
-          secondary: COLOR.secondary200,
+          secondary: COLOR.secondary300,
         },
       }),
   },

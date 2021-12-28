@@ -4,14 +4,14 @@ import { COLOR } from '../../../styles/colors';
 const CardWrapper = styled.div`
   max-width: 354px;
   min-height: 189px;
-  background-color: ${COLOR.secondary50};
+  background-color: ${props =>  props.theme.palette.primary.dark};
   border-radius: 8px;
   padding: 8px;
   box-sizing: border-box;
 `;
 const CardInner = styled.div`
   padding: 1rem;
-  border: 1px solid ${COLOR.athensGray};
+  border: 1px solid  ${props =>  props.theme.palette.divider};
   border-radius: 4px;
 `;
 const CardTitle = styled.div`
@@ -23,7 +23,7 @@ const CardTitle = styled.div`
   margin-bottom: 8px;
 `;
 const CardHeading = styled.h4`
-  color: ${COLOR.secondary900};
+  color: ${props =>  props.theme.palette.text.primary};
   font-size: 18px;
   font-weight: 600;
   line-height: 150%;
@@ -31,7 +31,7 @@ const CardHeading = styled.h4`
   margin: 0 0 8px;
 `;
 const CardDetails = styled.p`
-  color: ${COLOR.secondary700};
+  color: ${props =>  props.theme.palette.text.secondary};
   font-size: 18px;
   font-weight: 400;
   line-height: 27px;

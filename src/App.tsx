@@ -1,11 +1,14 @@
 import { useMemo, useState } from 'react';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
+import {
+  ThemeProvider as MuiThemeProvider,
+  createTheme,
+} from '@mui/material/styles';
 import { CssBaseline } from '@mui/material';
+import { ThemeProvider } from 'styled-components';
 import { ThemeModeContext } from './contexts';
 import { Layout } from './components/Layout';
 import { DARK_MODE_THEME, LIGHT_MODE_THEME } from './utils/constants';
 import { getAppTheme } from './styles/theme';
-import './App.scss';
 
 const App = () => {
   const [mode, setMode] = useState<
@@ -27,10 +30,12 @@ const App = () => {
 
   return (
     <ThemeModeContext.Provider value={{ themeMode, theme: mode }}>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <Layout />
-      </ThemeProvider>
+      <MuiThemeProvider theme={theme}>
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <Layout />
+        </ThemeProvider>
+      </MuiThemeProvider>
     </ThemeModeContext.Provider>
   );
 };
