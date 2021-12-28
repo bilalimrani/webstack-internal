@@ -1,5 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import GlassdorCardComp from './GlassdorCard';
+// import editIcon from '../../../assets/svg/edit-icon.svg';
 
 export default {
   title: 'Components/Cards',
@@ -18,4 +19,5 @@ Glassdor.args = {
   rating: '4.9',
   recommendedText: '98% of employees on Glassdoor recommend Webstacks',
   editLinkText: 'Read our reviews',
+  // editIcon: { editIcon },
 };
