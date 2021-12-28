@@ -5,6 +5,7 @@ import { ThemeModeContext } from './contexts';
 import { Layout } from './components/Layout';
 import { DARK_MODE_THEME, LIGHT_MODE_THEME } from './utils/constants';
 import { getAppTheme } from './styles/theme';
+import './App.scss';
 
 const App = () => {
   const [mode, setMode] = useState<
