@@ -1,6 +1,8 @@
 import { FunctionComponent } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import StarIcon from '@mui/icons-material/Star';
+import editIcon from '../../../assets/svg/edit-icon.svg';
+
 import {
   CardWrapper,
   CardInner,
@@ -17,7 +19,6 @@ interface GlassdorCardProps {
   rating?: string;
   recommendedText?: string;
   editLinkText?: string;
-  editIcon?: any;
 }
 
 const GlassdorCard: FunctionComponent<GlassdorCardProps> = (
@@ -29,7 +30,6 @@ const GlassdorCard: FunctionComponent<GlassdorCardProps> = (
     rating,
     recommendedText,
     editLinkText,
-    editIcon,
   } = props;
   return (
     <CardWrapper>
@@ -51,7 +51,7 @@ const GlassdorCard: FunctionComponent<GlassdorCardProps> = (
         </CardDetailsRecommended>
         <Router>
           <EditLink to="/">
-            {/* {editLinkText} <img src={editIcon} alt="edit-icon" />{' '} */}
+             {editLinkText} <img src={editIcon} alt="edit-icon" />
           </EditLink>
         </Router>
       </CardInner>

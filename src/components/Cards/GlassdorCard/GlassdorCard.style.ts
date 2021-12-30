@@ -1,17 +1,24 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { COLOR } from '../../../styles/colors';
+import { device } from '../../../styles/breakpoints';
 
 const CardWrapper = styled.div`
+  @media ${device.mobileM} {
+    padding: 1rem;
+  }
     background-color: ${props =>  props.theme.palette.primary.dark};
     width: 100%;
     padding: 40px;
-    // border: 1px solid ${COLOR.secondary200};
+    border: 1px solid ${COLOR.secondary200};
     box-sizing: border-box;
     border-radius: 4px;
 `;
 const CardInner = styled.div`
     max-width: 440px;
+    @media ${device.mobileM} {
+        max-width: 100%;
+    }
 `;
 const CardHeading = styled.h3`
     color:  ${props =>  props.theme.palette.text.primary};
@@ -19,7 +26,9 @@ const CardHeading = styled.h3`
     font-weight: 800;
     line-height: 150%;
     margin: 0 0 8px;
-    font-family: 'Averta', sans-serif;
+    @media ${device.mobileM} {
+        font-size: 16px;
+    }
 `;
 const CardDetails = styled.p`
     color: ${props =>  props.theme.palette.text.secondary};
@@ -27,7 +36,10 @@ const CardDetails = styled.p`
     font-weight: 400;
     line-height: 27px;
     margin: 0 0 1rem;
-    font-family: 'Averta', sans-serif;
+    @media ${device.mobileM} {
+        font-size: 14px;
+        margin: 0 0 8px;
+    }
 `;
 const RatingsWrapper = styled.div`
     display: flex;
@@ -35,7 +47,6 @@ const RatingsWrapper = styled.div`
     column-gap: 8px;
     font-weight: 600;
     font-size: 28.13px;
-    font-family: 'Averta', sans-serif;
     line-height: 150%;
     color: #4DA74E;
     margin-bottom: 8px;
@@ -44,23 +55,29 @@ const RatingsWrapper = styled.div`
         align-items: center;
         column-gap: 8px;
         color: #4DA74E;
-        font-family: 'Averta', sans-serif;
         StarIcon {
             color: #4DA74E;
         }
     }
+    @media ${device.mobileM} {
+        font-size: 16px;
+        span {
+            svg {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
 `;
 const CardDetailsRecommended = styled(CardDetails)`
-    color: ${props =>  props.theme.palette.text.primary};;
+    color: ${props =>  props.theme.palette.text.primary};
     font-weight: 600;
     margin: 0 0 8px;
-    font-family: 'Averta', sans-serif;
 `;
 const EditLink = styled(Link)`
     color: ${COLOR.neutral600};
     font-weight: 600;
     margin: 0 0 0 0;
-    font-family: 'Averta', sans-serif;
     text-decoration: none;
     display: inline-flex;
     align-items: center;
